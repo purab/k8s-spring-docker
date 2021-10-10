@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-k8s-demo-deployment
+  labels:
+    app: docker-spring
+spec:
+  replicas: 1
+  selelctor:
+    matchLables: docker-spring
+  templates:
+    metadata:
+      labels:
+        app: docker-spring
+    spec:
+      containers:
+        - name: docker-spring
+          image:
+          ports:
+            - containerPort: 8080
