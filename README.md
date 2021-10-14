@@ -1,0 +1,1 @@
+Docker file add in this project and k8s deployment file is added
